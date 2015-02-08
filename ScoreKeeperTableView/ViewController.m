@@ -23,13 +23,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    self.scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
+    [self.view addSubview:self.scrollView];
+    
     self.title = @"Score Keeper";
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
     self.dataSource = [SKTableViewDataSource new];
     self.tableView.dataSource = self.dataSource;
     [self.tableView registerClass:[SKTableViewCell class] forCellReuseIdentifier:@"cell"];
-    [self.view addSubview:self.tableView];
+    [self.scrollView addSubview:self.tableView];
     
+    self.scrollView.contentSize = CGSizeMake(self.tableView.frame.size.width, self.tableView.frame.size.height);
     
 }
 
