@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0084A19A-62F2-44BF-9180-575FB5488B80</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ScoreKeeperTableView</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F2AECDBC6813998A8F3AF64EE1F9E39ED980B17C</key>
+		<string>https://github.com/jewelien/ScoreKeeperTableView.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ScoreKeeperTableView.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F2AECDBC6813998A8F3AF64EE1F9E39ED980B17C</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jewelien/ScoreKeeperTableView.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F2AECDBC6813998A8F3AF64EE1F9E39ED980B17C</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F2AECDBC6813998A8F3AF64EE1F9E39ED980B17C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ScoreKeeperTableView</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -24,7 +24,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     self.title = @"Score Keeper";
-    self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
     self.dataSource = [SKTableViewDataSource new];
     self.tableView.dataSource = self.dataSource;
     [self.tableView registerClass:[SKTableViewCell class] forCellReuseIdentifier:@"cell"];
