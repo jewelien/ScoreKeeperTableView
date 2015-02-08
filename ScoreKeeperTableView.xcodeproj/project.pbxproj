@@ -14,6 +14,8 @@
 		FCC0557D1A8702CD00C9336C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCC0557C1A8702CD00C9336C /* Images.xcassets */; };
 		FCC055801A8702CD00C9336C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCC0557E1A8702CD00C9336C /* LaunchScreen.xib */; };
 		FCC0558C1A8702CD00C9336C /* ScoreKeeperTableViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC0558B1A8702CD00C9336C /* ScoreKeeperTableViewTests.m */; };
+		FCC055971A87058F00C9336C /* SKTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC055961A87058F00C9336C /* SKTableViewDataSource.m */; };
+		FCC0559D1A871B9700C9336C /* SKTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC0559C1A871B9700C9336C /* SKTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		FCC055851A8702CD00C9336C /* ScoreKeeperTableViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScoreKeeperTableViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC0558A1A8702CD00C9336C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCC0558B1A8702CD00C9336C /* ScoreKeeperTableViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScoreKeeperTableViewTests.m; sourceTree = "<group>"; };
+		FCC055951A87058F00C9336C /* SKTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTableViewDataSource.h; sourceTree = "<group>"; };
+		FCC055961A87058F00C9336C /* SKTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTableViewDataSource.m; sourceTree = "<group>"; };
+		FCC0559B1A871B9700C9336C /* SKTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTableViewCell.h; sourceTree = "<group>"; };
+		FCC0559C1A871B9700C9336C /* SKTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +91,10 @@
 				FCC055741A8702CD00C9336C /* AppDelegate.m */,
 				FCC055761A8702CD00C9336C /* ViewController.h */,
 				FCC055771A8702CD00C9336C /* ViewController.m */,
+				FCC055951A87058F00C9336C /* SKTableViewDataSource.h */,
+				FCC055961A87058F00C9336C /* SKTableViewDataSource.m */,
+				FCC0559B1A871B9700C9336C /* SKTableViewCell.h */,
+				FCC0559C1A871B9700C9336C /* SKTableViewCell.m */,
 				FCC055791A8702CD00C9336C /* Main.storyboard */,
 				FCC0557C1A8702CD00C9336C /* Images.xcassets */,
 				FCC0557E1A8702CD00C9336C /* LaunchScreen.xib */,
@@ -221,6 +231,8 @@
 			files = (
 				FCC055781A8702CD00C9336C /* ViewController.m in Sources */,
 				FCC055751A8702CD00C9336C /* AppDelegate.m in Sources */,
+				FCC0559D1A871B9700C9336C /* SKTableViewCell.m in Sources */,
+				FCC055971A87058F00C9336C /* SKTableViewDataSource.m in Sources */,
 				FCC055721A8702CD00C9336C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
