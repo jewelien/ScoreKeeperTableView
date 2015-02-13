@@ -12,9 +12,12 @@
 
 @implementation SKTableViewDataSource
 
+-(void)registerTableView:(UITableView *)tableView {
+    [tableView registerClass:[SKTableViewCell class] forCellReuseIdentifier:@"cell"];
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return self.numberOfRows.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -22,5 +25,16 @@
     cell.selectedIndex = indexPath;
     return cell;
 }
+
+-(NSIndexPath *)newRow:(UITableView *)tableView {
+    SKTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    [self.numberOfRows addObject:cell];
+    NSInteger insertRow = [self.numberOfRows indexOfObject:cell];
+    NSIndexPath *indexPath  = [NSIndexPath indexPathForRow:insertRow inSection:0];
+    return indexPath;
+}
+
+
+
 
 @end

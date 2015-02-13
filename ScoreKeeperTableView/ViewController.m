@@ -30,17 +30,23 @@
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
     self.dataSource = [SKTableViewDataSource new];
     self.tableView.dataSource = self.dataSource;
-    [self.tableView registerClass:[SKTableViewCell class] forCellReuseIdentifier:@"cell"];
-    [self.scrollView addSubview:self.tableView];
+    [self.dataSource registerTableView:self.tableView];
     
+    [self.scrollView addSubview:self.tableView];
     self.scrollView.contentSize = CGSizeMake(self.tableView.frame.size.width, self.tableView.frame.size.height);
+
+    self.dataSource.numberOfRows = [[NSMutableArray alloc] init];
+    
+    UIBarButtonItem *addPlayer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addPlayer)];
+    self.navigationItem.rightBarButtonItem = addPlayer;
     
 }
 
 
-
-
-
+- (void)addPlayer {
+    NSIndexPath *indexPath = [self.dataSource newRow:self.tableView];
+    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationBottom];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -48,3 +54,7 @@
 }
 
 @end
+
+
+
+

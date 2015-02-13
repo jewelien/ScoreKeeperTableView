@@ -67,7 +67,8 @@
 
 - (void)stepperAction:(UIStepper *)scoreStepper {
     int value = [scoreStepper value];
-    self.scoreTracker.text = [NSString stringWithFormat:@"%d", value];
+    int newValue = value * 1;
+    self.scoreTracker.text = [NSString stringWithFormat:@"%d", newValue];
     
 }
 
@@ -77,10 +78,9 @@
 }
 
 
-
-
 - (void)scoreClear:(UIButton *)clearScore {
     self.scoreTracker.text = @"0";
+    self.scoreStepper.value = 0;
 }
 
 

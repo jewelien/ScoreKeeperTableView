@@ -11,5 +11,11 @@
 
 @interface SKTableViewDataSource : NSObject <UITableViewDataSource>
 
+@property (nonatomic, strong) NSMutableArray *numberOfRows;
+
+-(void)registerTableView:(UITableView *)tableView;
+
+-(NSIndexPath *)newRow:(UITableView *)tableView;
+
 
 @end
