@@ -11,8 +11,7 @@
 
 @interface SKTableViewCell () <UITextFieldDelegate>
 
-@property (nonatomic, strong) UILabel *scoreTracker;
-@property (nonatomic, strong) UIStepper *scoreStepper;
+
 
 @end
 
@@ -30,17 +29,18 @@
     float top = 10;
     float labelHeight = 30;
 
-    UITextField *nameField = [[UITextField alloc] initWithFrame:CGRectMake(40, top, 125, labelHeight)];
-//    nameField.backgroundColor = [UIColor redColor];
-    nameField.placeholder = @"Name";
-    nameField.delegate = self;
-    [self.contentView addSubview:nameField];
-    nameField.clearButtonMode = YES;
+    self.nameField = [[UITextField alloc] initWithFrame:CGRectMake(40, top, 125, labelHeight)];
+//    self.nameField.backgroundColor = [UIColor redColor];
+    self.nameField.placeholder = @"Name";
+    self.nameField.delegate = self;
+    [self.contentView addSubview:self.nameField];
+    self.nameField.clearButtonMode = YES;
 
     
     self.scoreTracker = [UILabel new];
     self.scoreTracker.frame = CGRectMake(125 + 10, top, 75, labelHeight);
-    self.scoreTracker.text = @"0";
+//    self.scoreTracker.text = @"0";
+    self.scoreTracker.text = [NSString stringWithFormat:@"%d", (int)self.scoreStepper.value];
     self.scoreTracker.textAlignment = NSTextAlignmentCenter;
 //    scoreCount.backgroundColor = [UIColor yellowColor];
     [self.contentView addSubview:self.scoreTracker];
@@ -60,6 +60,7 @@
     [clearScore setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     [clearScore addTarget:self action:@selector(scoreClear:) forControlEvents:UIControlEventTouchUpInside];
     [self.contentView addSubview:clearScore];
+    
     
     
     return self;
@@ -82,7 +83,6 @@
     self.scoreTracker.text = @"0";
     self.scoreStepper.value = 0;
 }
-
 
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

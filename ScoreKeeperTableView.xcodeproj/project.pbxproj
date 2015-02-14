@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC63526D1A8EB71A00041C1C /* Players.m in Sources */ = {isa = PBXBuildFile; fileRef = FC63526C1A8EB71A00041C1C /* Players.m */; };
+		FC6352701A8EB74800041C1C /* PlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC63526F1A8EB74800041C1C /* PlayerController.m */; };
 		FCC055721A8702CD00C9336C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC055711A8702CD00C9336C /* main.m */; };
 		FCC055751A8702CD00C9336C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC055741A8702CD00C9336C /* AppDelegate.m */; };
 		FCC055781A8702CD00C9336C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC055771A8702CD00C9336C /* ViewController.m */; };
@@ -29,6 +31,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FC63526B1A8EB71A00041C1C /* Players.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Players.h; sourceTree = "<group>"; };
+		FC63526C1A8EB71A00041C1C /* Players.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Players.m; sourceTree = "<group>"; };
+		FC63526E1A8EB74800041C1C /* PlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerController.h; sourceTree = "<group>"; };
+		FC63526F1A8EB74800041C1C /* PlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerController.m; sourceTree = "<group>"; };
 		FCC0556C1A8702CD00C9336C /* ScoreKeeperTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScoreKeeperTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC055701A8702CD00C9336C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCC055711A8702CD00C9336C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -95,6 +101,10 @@
 				FCC055961A87058F00C9336C /* SKTableViewDataSource.m */,
 				FCC0559B1A871B9700C9336C /* SKTableViewCell.h */,
 				FCC0559C1A871B9700C9336C /* SKTableViewCell.m */,
+				FC63526B1A8EB71A00041C1C /* Players.h */,
+				FC63526C1A8EB71A00041C1C /* Players.m */,
+				FC63526E1A8EB74800041C1C /* PlayerController.h */,
+				FC63526F1A8EB74800041C1C /* PlayerController.m */,
 				FCC055791A8702CD00C9336C /* Main.storyboard */,
 				FCC0557C1A8702CD00C9336C /* Images.xcassets */,
 				FCC0557E1A8702CD00C9336C /* LaunchScreen.xib */,
@@ -229,9 +239,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC63526D1A8EB71A00041C1C /* Players.m in Sources */,
 				FCC055781A8702CD00C9336C /* ViewController.m in Sources */,
 				FCC055751A8702CD00C9336C /* AppDelegate.m in Sources */,
 				FCC0559D1A871B9700C9336C /* SKTableViewCell.m in Sources */,
+				FC6352701A8EB74800041C1C /* PlayerController.m in Sources */,
 				FCC055971A87058F00C9336C /* SKTableViewDataSource.m in Sources */,
 				FCC055721A8702CD00C9336C /* main.m in Sources */,
 			);
@@ -424,6 +436,7 @@
 				FCC055911A8702CD00C9336C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FCC055921A8702CD00C9336C /* Build configuration list for PBXNativeTarget "ScoreKeeperTableViewTests" */ = {
 			isa = XCConfigurationList;
@@ -432,6 +445,7 @@
 				FCC055941A8702CD00C9336C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
