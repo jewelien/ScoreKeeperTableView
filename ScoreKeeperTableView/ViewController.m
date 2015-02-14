@@ -11,9 +11,6 @@
 #import "SKTableViewCell.h"
 
 
-#import "Players.h"
-#import "PlayerController.h"
-
 @interface ViewController ()
 
 @property (nonatomic, strong) UITableView *tableView;
@@ -43,12 +40,7 @@
     
     UIBarButtonItem *addPlayer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addPlayer)];
     self.navigationItem.rightBarButtonItem = addPlayer;
-    
-//    UIButton *saveButton = [[UIButton alloc] initWithFrame:CGRectMake(170, 65, 50, 30)];
-//    saveButton.backgroundColor = [UIColor lightGrayColor];
-//    [saveButton setTitle:@"Save" forState:UIControlStateNormal];
-//        [saveButton addTarget:self action:@selector(saveAction) forControlEvents:UIControlEventTouchUpInside];
-//    [self.view addSubview:saveButton];
+
 
 }
 

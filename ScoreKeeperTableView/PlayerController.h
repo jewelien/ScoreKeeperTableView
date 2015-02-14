@@ -15,7 +15,9 @@
 
 +(PlayerController *)sharedInstance;
 
-//-(void) saveToDefaults;
-//-(void) defaultsToArray;
+-(void)addPlayer:(Players *)player;
+
+-(void) saveToDefaults;
+-(void) defaultsToArray;
 
 @end

@@ -18,28 +18,35 @@ static NSString *const playersKey = @"players";
     static dispatch_once_t onceToken;
 dispatch_once(&onceToken, ^{
     sharedInstance = [[PlayerController alloc] init];
-    
+    [sharedInstance defaultsToArray];
 });
     return sharedInstance;
 }
 
-//
-//-(void) saveToDefaults {
-//    NSMutableArray *playersDictionary = [NSMutableArray new];
-//    for (Players *player in playersDictionary) {
-//        [playersDictionary addObject:player];  ///need to add method in players in which we set each key to a property. 
-//    }
-//    [[NSUserDefaults standardUserDefaults] setObject:playersDictionary forKey:(playersKey)];
-//    
-//}
-//
-//-(void) defaultsToArray{
-//    NSArray *playersDictionary = [[NSUserDefaults standardUserDefaults] objectForKey:playersKey];
-//    NSMutableArray *players = [NSMutableArray new];
-//    for (NSDictionary ) {
-//        
-//    }
-//    
-//}
+-(void)addPlayer:(Players *)player {
+    NSMutableArray *mutableArray = [[NSMutableArray alloc] initWithArray:self.players];
+    [mutableArray addObject:player];
+    self.players = mutableArray;
+    [self saveToDefaults];
+}
+
+
+-(void) saveToDefaults {
+    NSMutableArray *playersDictionaries = [NSMutableArray new];
+    for (Players *player in playersDictionaries) {
+        [playersDictionaries addObject:[player playersDictionary]];  ///need to add method in players in which we set each key to a property.
+    }
+    [[NSUserDefaults standardUserDefaults] setObject:playersDictionaries forKey:(playersKey)];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+-(void) defaultsToArray{
+    NSArray *playersDictionary = [[NSUserDefaults standardUserDefaults] objectForKey:playersKey];
+    NSMutableArray *players = [NSMutableArray new];
+    for (NSDictionary *player in playersDictionary ) {
+        [players addObject:[[Players alloc] initWithDictionary:player]];
+    }
+    self.players = playersDictionary;
+}
 
 @end

@@ -9,6 +9,10 @@
 #import "SKTableViewCell.h"
 #import "ViewController.h"
 
+#import "Players.h"
+#import "PlayerController.h"
+
+
 @interface SKTableViewCell () <UITextFieldDelegate>
 
 
@@ -54,16 +58,28 @@
     
     
     
-    UIButton *clearScore = [[UIButton alloc] initWithFrame:CGRectMake(310, top, 50, labelHeight)];
-//    clearScore.backgroundColor = [UIColor grayColor];
-    [clearScore setTitle:@"clear" forState:UIControlStateNormal];
-    [clearScore setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-    [clearScore addTarget:self action:@selector(scoreClear:) forControlEvents:UIControlEventTouchUpInside];
-    [self.contentView addSubview:clearScore];
+//    UIButton *clearScore = [[UIButton alloc] initWithFrame:CGRectMake(310, top, 50, labelHeight)];
+////    clearScore.backgroundColor = [UIColor grayColor];
+//    [clearScore setTitle:@"clear" forState:UIControlStateNormal];
+//    [clearScore setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+//    [clearScore addTarget:self action:@selector(scoreClear:) forControlEvents:UIControlEventTouchUpInside];
+//    [self.contentView addSubview:clearScore];
     
+    
+    UIButton *saveButton = [[UIButton alloc] initWithFrame:CGRectMake(320, 10, 50, 30)];
+    saveButton.backgroundColor = [UIColor lightGrayColor];
+    [saveButton setTitle:@"Save" forState:UIControlStateNormal];
+    [saveButton addTarget:self action:@selector(saveAction) forControlEvents:UIControlEventTouchUpInside];
+    [self.contentView addSubview:saveButton];
     
     
     return self;
+}
+
+- (void) saveAction {
+    Players *savePlayer = [[Players alloc] initWithDictionary:@{nameKey:self.nameField, scoreKey:self.scoreTracker}];
+    [[PlayerController sharedInstance] addPlayer:savePlayer];
+    
 }
 
 - (void)stepperAction:(UIStepper *)scoreStepper {
