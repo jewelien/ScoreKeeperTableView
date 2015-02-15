@@ -10,9 +10,6 @@
 
 @interface SKTableViewCell : UITableViewCell
 
-@property (nonatomic, strong) UITextField *nameField;
-@property (nonatomic, strong) UILabel *scoreTracker;
-@property (nonatomic, strong) UIStepper *scoreStepper;
 
 @property (nonatomic, strong) NSIndexPath *selectedIndex;
 

@@ -15,6 +15,10 @@
 
 @interface SKTableViewCell () <UITextFieldDelegate>
 
+@property (nonatomic, strong) UITextField *nameField;
+@property (nonatomic, strong) UILabel *scoreTracker;
+@property (nonatomic, strong) UIStepper *scoreStepper;
+@property (nonatomic, strong) Players *player;
 
 
 @end
@@ -66,9 +70,12 @@
 //    [self.contentView addSubview:clearScore];
     
     
+    
+    
     UIButton *saveButton = [[UIButton alloc] initWithFrame:CGRectMake(320, 10, 50, 30)];
     saveButton.backgroundColor = [UIColor lightGrayColor];
     [saveButton setTitle:@"Save" forState:UIControlStateNormal];
+    saveButton.showsTouchWhenHighlighted = YES;
     [saveButton addTarget:self action:@selector(saveAction) forControlEvents:UIControlEventTouchUpInside];
     [self.contentView addSubview:saveButton];
     
@@ -77,10 +84,16 @@
 }
 
 - (void) saveAction {
-    Players *savePlayer = [[Players alloc] initWithDictionary:@{nameKey:self.nameField, scoreKey:self.scoreTracker}];
-    [[PlayerController sharedInstance] addPlayer:savePlayer];
+    Players *player = [[Players alloc] initWithDictionary:@{nameKey:self.nameField, scoreKey:self.scoreTracker}];
+    if (self.player) {
+        [[PlayerController sharedInstance] replacePlayer:self.player withPlayer:player];
+    } else {
+        [[PlayerController sharedInstance] addPlayer:player];
+    }
     
 }
+
+
 
 - (void)stepperAction:(UIStepper *)scoreStepper {
     int value = [scoreStepper value];

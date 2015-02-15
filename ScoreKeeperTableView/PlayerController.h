@@ -16,6 +16,7 @@
 +(PlayerController *)sharedInstance;
 
 -(void)addPlayer:(Players *)player;
+-(void)replacePlayer:(NSDictionary *)oldPlayer withPlayer:(NSDictionary *)newPlayer;
 
 -(void) saveToDefaults;
 -(void) defaultsToArray;

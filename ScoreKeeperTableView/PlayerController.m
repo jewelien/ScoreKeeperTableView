@@ -30,6 +30,21 @@ dispatch_once(&onceToken, ^{
     [self saveToDefaults];
 }
 
+-(void)replacePlayer:(NSDictionary *)oldPlayer withPlayer:(NSDictionary *)newPlayer {
+    if (!oldPlayer || !newPlayer) {
+        return;
+    }
+    NSMutableArray *mutableArray = self.players.mutableCopy;
+    if ([mutableArray containsObject:oldPlayer]) {
+        NSInteger oldPlayerIndex = [mutableArray indexOfObject:oldPlayer];
+        [mutableArray replaceObjectAtIndex:oldPlayerIndex withObject:newPlayer];
+    }
+    self.players = mutableArray;
+    [self saveToDefaults];
+    
+}
+
+
 
 -(void) saveToDefaults {
     NSMutableArray *playersDictionaries = [NSMutableArray new];

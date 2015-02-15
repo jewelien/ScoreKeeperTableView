@@ -34,6 +34,14 @@
     return indexPath;
 }
 
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        SKTableViewCell *cell = self.numberOfRows[indexPath.row];
+        [self.numberOfRows removeObject:cell];
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
+
+}
 
 
 
